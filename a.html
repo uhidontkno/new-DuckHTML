@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en"  class="w-full h-full>
+<head >
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Duck HTML</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body class="w-full h-full">
+  <link rel="stylesheet" href="index.css"></link>
+  <style> 
+  * {
+    color-scheme: dark;
+}
+vsep {
+    border-right: 2px solid rgba(255,255,255,.5);
+    display: inline !important;
+    margin-left: 6px;
+    height: 100%;
+}
+dh:before {
+    content: "DuckHTML";
+}
+@keyframes dh_h1_anim {
+    0% {
+        content: "FbngHLPW ";
+        font-size: 8px;
+        opacity: 0;
+    }
+    5% {
+        content: "DnhyMRFQ. ";
+        font-size: 12px;
+    }
+    10% {
+        content: "DuxcKIUJ. ";
+    }
+    15% {
+        content: "DuchQBVG. ";
+    }
+    20% {
+        content: "DuckERRO. ";
+    }
+    25% {
+        content: "DuckHGEE. ";
+    }
+    30% {
+        content: "DuckHTKJ.";
+        color: #fff;
+    }
+    40% {
+        content: "DuckHTMI.";
+    }
+    50% {
+        content: "DuckHTML!";
+        color: #ff0;
+        font-size: 32px;
+    }
+    56% {
+        content: "DuckHTML!";
+    }
+    100% {
+        content: "DuckHTML!";
+        font-size: 24px;
+        color: #ff0;
+    }
+}
+blank {
+    min-width: 4px;
+    display: inline-block;
+    width: 4px;
+}
+dh:hover:before {
+    animation: dh_h1_anim 2.5s;
+    animation-fill-mode: forwards;
+}
+@keyframes dh_nav_hide {
+    0% {
+        position: relative;
+        bottom: 0.6rem;
+        opacity: 1;
+    }
+    100% {
+        position: relative;
+        bottom: 30px;
+        opacity: 0.5;
+    }
+}
+@keyframes dh_nav_appear {
+    0% {
+        position: relative;
+        bottom: 30px;
+        opacity: 0.5;
+    }
+    100% {
+        position: relative;
+        bottom: 0.6rem;
+        opacity: 1;
+    }
+}
+.dh_nav {
+    animation: dh_nav_hide 0.6s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    margin-bottom:32px;
+}
+.dh_nav_hitbox:hover .dh_nav {
+    animation: dh_nav_appear 0.6s;
+    animation-fill-mode: forwards;
+    margin-bottom:32px;
+}
+@keyframes dh_duck {
+    0% {
+        position: relative;
+        top: 0;
+    }
+    20% {
+        position: relative;
+        top: 32px;
+        left: 0;
+        transform: rotate(30deg);
+        opacity: 1;
+    }
+    40% {
+        position: relative;
+        top: 32px;
+        left: 500px;
+        transform: rotate(60deg);
+        opacity: 0;
+    }
+    50% {
+        position: relative;
+        top: 32px;
+        left: 500px;
+        transform: rotate(60deg) scaleX(-1);
+        opacity: 0;
+        filter:hue-rotate(0deg);
+    }
+    100% {
+        position: relative;
+        top: 0;
+        left: 0;
+        transform: rotate(0deg) scaleX(-1);
+        opacity: 1;
+        filter:hue-rotate(180deg) saturate(4);
+    }
+}
+.duck:hover img {
+    animation: dh_duck 2.33s forwards;
+}
+</style>
+<div class="dh_nav_hitbox ">
+  <div class="dh_nav relative bg-green-800/50  px-6 pt-2 shadow-xl ring-[3px] ring-green-800 mx-auto w-[96%] rounded-lg bottom-3 hover:bg-green-800 hover:ring-green-800/50 duration-[400ms] mb-8">
+   <h1 class="dh_h1 text-2xl font-bold m-0 inline"><dh></dh></h1>
+   <vsep class="inline pb-1 relative bottom-[5px] mr-[8px]"></vsep>
+   <span class="relative bottom-[3px]">
+     <a href="index.html" class="px-3  py-0.5 rounded-xl bg-green-950 hover:bg-green-700 duration-[400ms] ring-2 ring-green-700 hover:ring-green-900">Home</a>
+     <blank></blank>
+    <a href="a.html" class="px-3  py-0.5 rounded-xl bg-green-950 hover:bg-green-700 duration-[400ms] ring-2 ring-green-700 hover:ring-green-900">Ԍаｍеѕ</a>
+    <blank></blank>
+    <a href="c.html" class="px-3  py-0.5 rounded-xl bg-green-950 hover:bg-green-700 duration-[400ms] ring-2 ring-green-700 hover:ring-green-900">Credits</a>
+    <blank></blank>
+     <a href="s.html" class="px-3  py-0.5 rounded-xl bg-green-950 hover:bg-green-700 duration-[400ms] ring-2 ring-green-700 hover:ring-green-900">Settings</a>
+    </span>
+  </div>
+</div>
+  <h1 class="text-3xl font-bold text-center mx-auto">Ԍаｍеѕ:</h1>
+  <b class="text-center mx-auto block">/!\ = Known to not load correctly, or to freeze your browser.</b>
+  <div class="grid grid-cols-2 xs:grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 ring-2 ring-green-900 bg-green-800/50 px-3 py-2 rounded-lg mx-auto" style="max-width:960px !important;grid-gap:8px !important;">
+  <div class="card ring-2 ring-green-700 rounded-lg w-full h-full py-2 bg-black/25">
+  <span class=" w-[67%]"><div><h1 class="title text-lg font-semibold px-3 mb-2">TestCard</h1><a class=" ml-3 px-12 py-1 ring-2 ring-green-700 bg-slate-800 hover:bg-green-600 hover:ring-green-700/50 duration-[400ms] rounded-md"><i class="fa-solid fa-play"></i></a></div></span>
+  </div>
+  </div>
+<script>
+  const sleep = m => new Promise(r => setTimeout(r, m))
+  const xe=(i,k)=>{let c='';while(k.length<i.length)k+=k;for(let j=0;j<i.length;j++){let v1=i[j].charCodeAt(0),v2=k[j].charCodeAt(0),x=v1^v2,h=x.toString(16);c+=h.length<2?'0'+h:h}return btoa(c)};
+  fetch('assets/gs.json')
+  .then(response => response.json())
+  .then(async data => {
+    const container = document.querySelector('.grid');
+    
+    for (let i = 1; i < data.length; i++) {
+      sleep(10*i)
+      console.log(10*i)
+      const entry = data[i];
+      const card = document.querySelector('.card').cloneNode(true);
+      const nameElement = card.querySelector('span div h1');
+      nameElement.textContent = entry.name;
+      const linkElement = card.querySelector('span div a');
+      var xep = xe(`https://raw.githack.com/uhidontkno/gslib/main/${entry.path}/index.html`,"ad81d3b230d8e120828ab9dbda922b12")
+      var url = ""
+      try {
+       url = `d.html?g=${xep}&t=${btoa(entry.name)}`;
+      } catch(e) {
+        console.warn(`Failed to load ${entry.name}: ${e}`)
+      }
+      linkElement.href = url;
+      container.appendChild(card);
+      
+    }
+    document.querySelector('.card').remove()
+  })
+  .catch(error => {
+    console.error('Error fetching gs.json:', error);
+  });
+</script>
+</body>
+</html>

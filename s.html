@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en"  class="w-full h-full overflow-clip">
+<head >
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Duck HTML</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body class="w-full h-full overflow-clip">
+  <link rel="stylesheet" href="index.css"></link>
+  
+  <style> 
+   * {
+    color-scheme: dark;
+}
+vsep {
+    border-right: 2px solid rgba(255,255,255,.5);
+    display: inline !important;
+    margin-left: 6px;
+    height: 100%;
+}
+dh:before {
+    content: "DuckHTML";
+}
+@keyframes dh_h1_anim {
+    0% {
+        content: "FbngHLPW ";
+        font-size: 8px;
+        opacity: 0;
+    }
+    5% {
+        content: "DnhyMRFQ. ";
+        font-size: 12px;
+    }
+    10% {
+        content: "DuxcKIUJ. ";
+    }
+    15% {
+        content: "DuchQBVG. ";
+    }
+    20% {
+        content: "DuckERRO. ";
+    }
+    25% {
+        content: "DuckHGEE. ";
+    }
+    30% {
+        content: "DuckHTKJ.";
+        color: #fff;
+    }
+    40% {
+        content: "DuckHTMI.";
+    }
+    50% {
+        content: "DuckHTML!";
+        color: #ff0;
+        font-size: 32px;
+    }
+    56% {
+        content: "DuckHTML!";
+    }
+    100% {
+        content: "DuckHTML!";
+        font-size: 24px;
+        color: #ff0;
+    }
+}
+blank {
+    min-width: 4px;
+    display: inline-block;
+    width: 4px;
+}
+dh:hover:before {
+    animation: dh_h1_anim 2.5s;
+    animation-fill-mode: forwards;
+}
+@keyframes dh_nav_hide {
+    0% {
+        position: relative;
+        bottom: 0.6rem;
+        opacity: 1;
+    }
+    100% {
+        position: relative;
+        bottom: 30px;
+        opacity: 0.5;
+    }
+}
+@keyframes dh_nav_appear {
+    0% {
+        position: relative;
+        bottom: 30px;
+        opacity: 0.5;
+    }
+    100% {
+        position: relative;
+        bottom: 0.6rem;
+        opacity: 1;
+    }
+}
+.dh_nav {
+    animation: dh_nav_hide 0.6s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    margin-bottom:32px;
+}
+.dh_nav_hitbox:hover .dh_nav {
+    animation: dh_nav_appear 0.6s;
+    animation-fill-mode: forwards;
+    margin-bottom:32px;
+}
+@keyframes dh_duck {
+    0% {
+        position: relative;
+        top: 0;
+    }
+    20% {
+        position: relative;
+        top: 32px;
+        left: 0;
+        transform: rotate(30deg);
+        opacity: 1;
+    }
+    40% {
+        position: relative;
+        top: 32px;
+        left: 500px;
+        transform: rotate(60deg);
+        opacity: 0;
+    }
+    50% {
+        position: relative;
+        top: 32px;
+        left: 500px;
+        transform: rotate(60deg) scaleX(-1);
+        opacity: 0;
+        filter:hue-rotate(0deg);
+    }
+    100% {
+        position: relative;
+        top: 0;
+        left: 0;
+        transform: rotate(0deg) scaleX(-1);
+        opacity: 1;
+        filter:hue-rotate(180deg) saturate(4);
+    }
+}
+.duck:hover img {
+    animation: dh_duck 2.33s forwards;
+}
+@keyframes rainbow{0%{background-position:0 0}100%{background-position:100% 0}}.rainbow{background:linear-gradient(45deg,red,orange,#ff0,green,blue,indigo,violet);background-size:200% auto;animation:rainbow 6.5s linear infinite;-webkit-background-clip:text;-webkit-text-fill-color:transparent;text-shadow:-.5px -.5px 0 rgba(255,255,255,.2),.5px -.5px 0 rgba(255,255,255,.2),-.5px .5px 0 rgba(255,255,255,.2),.5px .5px 0 rgba(255,255,255,.2);animation-direction:alternate}.gy{background:linear-gradient(to right,orange,#006400,green,#ff0,green,#006400,orange);background-size:200% auto;animation:rainbow 4.5s linear infinite;-webkit-background-clip:text;-webkit-text-fill-color:transparent;animation-direction:alternate}
+</style>
+<div class="dh_nav_hitbox ">
+  <div class="dh_nav relative bg-green-800/50  px-6 pt-2 shadow-xl ring-[3px] ring-green-800 mx-auto w-[96%] rounded-lg bottom-2 hover:bg-green-800 hover:ring-green-800/50 duration-[400ms]">
+   <h1 class="dh_h1 text-2xl font-bold m-0 inline"><dh></dh></h1>
+   <vsep class="inline pb-1 relative bottom-[5px] mr-[8px]"></vsep>
+   <span class="relative bottom-[3px]">
+     <a href="index.html" class="px-3  py-0.5 rounded-xl bg-green-950 hover:bg-green-700 duration-[400ms] ring-2 ring-green-700 hover:ring-green-900">Home</a>
+     <blank></blank>
+    <a href="a.html" class="px-3  py-0.5 rounded-xl bg-green-950 hover:bg-green-700 duration-[400ms] ring-2 ring-green-700 hover:ring-green-900">Ԍаｍеѕ</a>
+    <blank></blank>
+    <a href="c.html" class="px-3  py-0.5 rounded-xl bg-green-950 hover:bg-green-700 duration-[400ms] ring-2 ring-green-700 hover:ring-green-900">Credits</a>
+    <blank></blank>
+     <a href="s.html" class="px-3  py-0.5 rounded-xl bg-green-950 hover:bg-green-700 duration-[400ms] ring-2 ring-green-700 hover:ring-green-900">Settings</a>
+    </span>
+  </div>
+</div>
+<h1 class="text-3xl font-bold text-center mx-auto rainbow">Coming soon...</h1>
+</div>
+</body>
+</html>
