@@ -1,0 +1,20 @@
+copy the following script tags and put them in the head element of whatever page you want to use
+<script src="https://unpkg.com/@titaniumnetwork-dev/ultraviolet@2.0.0/dist/uv.bundle.js" charset="UTF-8"></script>
+<script src="uv.config.js"></script>
+<script>
+    window.SWREGISTERED = false;
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('sw.js', { scope: '/service/' }).then(() => console.log("Registered UV service worker!"))
+        window.SWREGISTERED = true;
+    } else {
+        alert("Your browser doesn't support service workers. Please switch to a supported browser for this website to function properly.")
+    }
+</script>
+
+here's an example to use it:
+
+<script>
+    document.querySelector("iframe").src = '/service/' + __uv$config.encodeUrl("https://google.com")
+</script>
+
+replace https://google.com with the url you want to proxy

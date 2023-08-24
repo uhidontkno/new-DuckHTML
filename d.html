@@ -7,6 +7,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Duck HTML</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://unpkg.com/@titaniumnetwork-dev/ultraviolet@2.0.0/dist/uv.bundle.js" charset="UTF-8"></script>
+  <script src="uv.config.js"></script>
+  <script>
+    window.SWREGISTERED = false;
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('sw.js', { scope: '/service/' }).then(() => console.log("Registered UV service worker!"))
+        window.SWREGISTERED = true;
+    } else {
+        alert("Your browser doesn't support service workers. Please switch to a supported browser for this website to function properly.")
+    }
+  </script>
 </head>
 <body class="w-full h-full">
   <link rel="stylesheet" href="index.css"></link>
@@ -168,6 +179,7 @@ dh:hover:before {
 <iframe style="display:block;aspect-ratio:16 / 9 !important;width:960px;height:540px;" class="rounded-lg ring-black/50 ring w-[960px] mx-auto h-[540px]" src="data:text/html,<style>body,html{background:rgb(24,24,64)} div{color:white}</style><div>This is a test page. If you are seeing this, your activity has not been loaded yet. Please wait...</div>"></iframe>
 <button class="block px-4 py-1 ring-2 ring-green-950 bg-green-900 hover:bg-green-800 rounded-lg duration-[400ms] text-xl mx-auto text-center" onclick="reqfscr()">Fullscreen</button>
 </div>
+
 <script>
     const d=(c,k)=>{c=atob(c);let i=0,t='';for(let j=0;j<c.length;j+=2){let h=c.substr(j,2),x=parseInt(h,16),v1=x^k[i].charCodeAt(0);t+=String.fromCharCode(v1);i=(i+1)%k.length}return t};
     var entry = new URLSearchParams(window.location.search).get('g');
